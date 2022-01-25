@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoMob Mechanic Booking</title>
+</head>
+<body>
+  <header id="header"></header>
+  <main>
+    <h1>Book your service</h1>
+    <form>
+      <label for="name">
+        Name:
+        <input type="text">
+      </label>
+      <br />
+      <label for="email">
+        Email:
+        <input type="email">
+      </label>
+      <br />
+      <label for="number">
+        Phone Number:
+        <input type="tel">
+      </label>
+      <br />
+      <label for="service">
+        Select Service:
+        <select>
+          <option value="">Select Service</option>
+          <option value="preventive maintenance service">Preventive Maintenance Service</option>
+          <option value="body repair service">Body Repair Service</option>
+          <option value="car care service">Car Care Service</option>
+        </select>
+      </label>
+      <br />
+      <label for="make">
+        Car Make:
+        <select>
+          <option value="">Select Make</option>
+          <option value="mahindra">Mahindra</option>
+          <option value="honda">Honda</option>
+          <option value="hyundai">Hyundai</option>
+          <option value="ford">Ford</option>
+          <option value="toyota">Toyota</option>
+          <option value="nissan">Nissan</option>
+          <option value="dodge">Dodge</option>
+          <option value="crysler">Crysler</option>
+        </select>
+      </label>
+      <br />
+      <label for="model">
+        Car Model:
+        <input type="text">
+      </label>
+      <br />
+      <label for="fuel">
+        Fuel Type:
+        <input type="radio">Petrol
+        <input type="radio">Diesel
+        <input type="radio">LPG
+        <input type="radio">Others
+      </label>
+      <br />
+      <label for="kmRan">
+        Kilometers Ran:
+        <input type="number">
+      </label>
+      <br />
+      <button type="submit">Schedule an Appointment</button>
+      <p id="message"></p>
+    </form>
+  </main>
+  <footer id="footer"></footer>
+  <script src="./assets/js/form.js"></script>
+  <script src="./assets/js/index.js"></script>
+</body>
+</html>
