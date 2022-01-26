@@ -1,10 +1,8 @@
+const isLoggedIn = JSON.parse(localStorage.getItem('user'));
 const header = document.getElementById('header');
 const footer = document.getElementById('footer');
-// header.style.display = 'flex';
-// header.style.justifyContent = 'space-between';
-// header.style.alignItems = 'center';
 
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
   createHeader();
   createFooter();
 })
@@ -12,13 +10,11 @@ window.addEventListener('load', function() {
 function createHeader() {
   createTitle();
   createNav();
-  header.appendChild(document.createElement('hr'));
 }
 
 function createFooter() {
   const p = document.createElement('p');
   p.appendChild(document.createTextNode('Copyright &copy; 2020 AutoMob Mechanic. All Rights Reserved'));
-  footer.appendChild(document.createElement('hr'));
   footer.appendChild(p);
 }
 
@@ -28,8 +24,8 @@ function createTitle() {
 
   titleLink.href = 'http://127.0.0.1:5500/home.html';
   titleLink.appendChild(document.createTextNode('AutoMob Mechanic'));
-  titleLink.style.color = 'black';
-  titleLink.style.textDecoration = 'none';
+  // titleLink.style.color = 'black';
+  // titleLink.style.textDecoration = 'none';
   title.appendChild(titleLink);
 
   header.appendChild(title);
@@ -38,35 +34,52 @@ function createTitle() {
 function createNav() {
   const nav = document.createElement('nav');
 
-  const linkList = []
-  
+  const linkList = [];
+
   linkList[0] = document.createElement('a');
   linkList[0].href = 'http://127.0.0.1:5500/home.html';
   linkList[0].appendChild(document.createTextNode('Home'));
 
-  linkList[1] = document.createElement('a');
-  linkList[1].href = 'http://127.0.0.1:5500/services.html';
-  linkList[1].appendChild(document.createTextNode('Services'));
+  if (isLoggedIn && isLoggedIn.isAdmin) {
+    linkList[1] = document.createElement('a');
+    linkList[1].href = 'http://127.0.0.1:5500/reports.html';
+    linkList[1].appendChild(document.createTextNode('Reports'));
+    
+    linkList[2] = document.createElement('button');
+    linkList[2].addEventListener('click', function(){
+      localStorage.removeItem('user');
+      location.assign('http://127.0.0.1:5500/home.html')
+    })
+    linkList[2].appendChild(document.createTextNode('Logout'));
+  } else if(isLoggedIn) {
+    linkList[1] = document.createElement('a');
+    linkList[1].href = 'http://127.0.0.1:5500/service.html';
+    linkList[1].appendChild(document.createTextNode('service'));
 
-  linkList[2] = document.createElement('a');
-  linkList[2].href = 'http://127.0.0.1:5500/bookings.html';
-  linkList[2].appendChild(document.createTextNode('Bookings'));
-
-  linkList[3] = document.createElement('a');
-  linkList[3].appendChild(document.createTextNode('contact us at: contact@automob.com'));
-
-  for(let link of linkList) {
-    link.style.padding = '0 10px';
-    link.style.borderRight = '1px solid black'
-
-    link.style.color = 'black';
-    link.style.textDecoration = 'none';
+    linkList[2] = document.createElement('a');
+    linkList[2].href = 'http://127.0.0.1:5500/booking.html';
+    linkList[2].appendChild(document.createTextNode('Booking'));
+    
+    linkList[3] = document.createElement('button');
+    linkList[3].addEventListener('click', function(){
+      localStorage.removeItem('user');
+      location.assign('http://127.0.0.1:5500/home.html')
+    })
+    linkList[3].appendChild(document.createTextNode('Logout'));
+  } else {
+    linkList[1] = document.createElement('a');
+    linkList[1].href = 'http://127.0.0.1:5500/login.html';
+    linkList[1].appendChild(document.createTextNode('Login'));
   }
+
+
+  const contact = document.createElement('a');
+  contact.appendChild(document.createTextNode('contact us at: contact@automob.com'));
 
   const number = document.createElement('span');
   number.appendChild(document.createTextNode('999 999 9999'))
   number.style.padding = '0 10px'
 
-  nav.append(...linkList, number);
+  nav.append(...linkList, contact, number);
   header.appendChild(nav);
 }
