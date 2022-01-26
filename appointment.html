@@ -8,7 +8,46 @@
 </head>
 <body>
   <header id="header"></header>
+  <main>
+    <h2>Schedule Your Appointment</h2>
+    <form>
+      <label for="name">
+        Name:
+        <input id="name" name="name" type="text">
+      </label>
+      <br />
+      <label for="date">
+        Date:
+        <input id="date" name="date" type="date">
+      </label>
+      <br />
+      <label for="address">
+        Address:
+        <input id="address" name="address" type="text">
+      </label>
+      <br />
+      <label for="city">
+        City:
+        <input id="city" name="city" type="text">
+      </label>
+      <br />
+      <label for="state">
+        State:
+        <input id="state" name="state" type="text">
+      </label>
+      <br />
+      <label for="notification">
+        Send Notification:
+        <input id="email" name="notification" type="checkbox">Email
+        <input id="sms" name="notification" type="checkbox">SMS
+      </label>
+      <br />
+      <button type="submit">book</button>
+      <p id="message"></p>
+    </form>
+  </main>
   <footer id="footer"></footer>
+  <script src="./assets/js/appointment.js"></script>
   <script src="./assets/js/index.js"></script>
 </body>
 </html>

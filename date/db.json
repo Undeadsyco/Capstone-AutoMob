@@ -1,0 +1,82 @@
+{
+  "appointments": [
+    {
+      "name": "Brandon Santana",
+      "email": "bubblebutt199891@gmail.com",
+      "number": "3162529687",
+      "service": "preventive maintenance service",
+      "make": "crysler",
+      "model": "300M",
+      "kmRan": "12357",
+      "fuel": "petrol",
+      "id": 1,
+      "date": "2022-01-27",
+      "address": "831 south dellrose",
+      "city": "Wichita",
+      "state": "KS",
+      "emailnotification": false,
+      "smsNotification": false
+    },
+    {
+      "name": "Kristen Stinnett",
+      "email": "Kristen.stinnett@washburn.edu",
+      "number": "3168710320",
+      "service": "body repair service",
+      "make": "ford",
+      "model": "F150",
+      "kmRan": "19747623",
+      "fuel": "petrol",
+      "id": 4,
+      "date": "2022-01-29",
+      "address": "5852 SW Candletree Dr. Apt. 12",
+      "city": "Topeka",
+      "state": "KS",
+      "emailNotification": false,
+      "smsNotification": false
+    },
+    {
+      "name": "tyler",
+      "email": "TylerSantana@gmail.com",
+      "number": "1244363254",
+      "service": "preventive maintenance service",
+      "make": "nissan",
+      "model": "Altama",
+      "kmRan": "525252",
+      "fuel": "petrol",
+      "id": 6
+    },
+    {
+      "name": "Nicholas Santana",
+      "email": "nick@gmail.com",
+      "number": "1438693575",
+      "service": "car care service",
+      "make": "dodge",
+      "model": "Charger",
+      "kmRan": "16834",
+      "fuel": "petrol",
+      "id": 7
+    },
+    {
+      "name": "amy santana",
+      "email": "amy@gmail.com",
+      "number": "3165503278",
+      "service": "car care service",
+      "make": "ford",
+      "model": "Mustang",
+      "kmRan": "13532",
+      "fuel": "petrol",
+      "id": 8
+    },
+    {
+      "name": "austin smith",
+      "email": "AustinSmith@gmail.com",
+      "number": "1562689214",
+      "service": "body repair service",
+      "make": "dodge",
+      "model": "Chalanger",
+      "kmRan": "725315",
+      "fuel": "petrol",
+      "id": 9
+    }
+  ]
+}

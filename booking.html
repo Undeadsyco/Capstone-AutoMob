@@ -13,22 +13,22 @@
     <form>
       <label for="name">
         Name:
-        <input type="text">
+        <input id="name" name="name" type="text">
       </label>
       <br />
       <label for="email">
         Email:
-        <input type="email">
+        <input id="email" name="email" type="email">
       </label>
       <br />
       <label for="number">
         Phone Number:
-        <input type="tel">
+        <input id="number" name="number" type="tel">
       </label>
       <br />
       <label for="service">
         Select Service:
-        <select>
+        <select id="service" name="service">
           <option value="">Select Service</option>
           <option value="preventive maintenance service">Preventive Maintenance Service</option>
           <option value="body repair service">Body Repair Service</option>
@@ -38,7 +38,7 @@
       <br />
       <label for="make">
         Car Make:
-        <select>
+        <select id="make" name="make">
           <option value="">Select Make</option>
           <option value="mahindra">Mahindra</option>
           <option value="honda">Honda</option>
@@ -53,20 +53,20 @@
       <br />
       <label for="model">
         Car Model:
-        <input type="text">
+        <input id="model" name="model" type="text">
       </label>
       <br />
       <label for="fuel">
         Fuel Type:
-        <input type="radio">Petrol
-        <input type="radio">Diesel
-        <input type="radio">LPG
-        <input type="radio">Others
+        <input id="petrol" name="fuel" value="petrol" type="radio">Petrol
+        <input id="diesel" name="fuel" value="diesel" type="radio">Diesel
+        <input id="lpg" name="fuel" value="lpg" type="radio">LPG
+        <input id="others" name="fuel" value="others" type="radio">Others
       </label>
       <br />
       <label for="kmRan">
         Kilometers Ran:
-        <input type="number">
+        <input id="kmRan" name="kmRan" type="number">
       </label>
       <br />
       <button type="submit">Schedule an Appointment</button>
@@ -74,7 +74,7 @@
     </form>
   </main>
   <footer id="footer"></footer>
-  <script src="./assets/js/form.js"></script>
+  <script src="./assets/js/booking.js"></script>
   <script src="./assets/js/index.js"></script>
 </body>
 </html>
