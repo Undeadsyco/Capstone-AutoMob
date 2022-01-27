@@ -135,3 +135,44 @@ body {
   color: white;
 }
 /* Login & Signup Styles End */
+
+/* Services Page Styles */
+#servicesPage {
+  height: 85%;
+  padding: 20px;
+}
+
+#servicesPage h2 {
+  margin-bottom: 20px;
+}
+
+#servicesPage p {
+  margin-bottom: 20px;
+}
+
+#servicesPage > section {
+  margin-top: 60px;
+  display: flex; 
+  justify-content: space-between;
+}
+
+#servicesPage > section section {
+  width: 30%;
+  text-align: center;
+}
+
+#servicesPage > section section button {
+  width: 25%;
+  height: 25px;
+  background-color: blue;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+#servicesPage #timer {
+  margin: 0;
+  position: relative;
+  bottom: -20px;
+  color: red;
+}

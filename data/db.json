@@ -1,14 +1,28 @@
 {
   "users": [
     {
+      "id": 1,
       "username": "Brandon Santana",
       "password": "password1",
       "isAdmin": false
     },
     {
+      "id": 2,
       "username": "Admin",
       "password": "Admin@123",
       "isAdmin": true
+    },
+    {
+      "username": "adam",
+      "password": "password1",
+      "isAdmin": false,
+      "id": 3
+    },
+    {
+      "username": "user",
+      "password": "password1",
+      "isAdmin": false,
+      "id": 4
     }
   ]
 }

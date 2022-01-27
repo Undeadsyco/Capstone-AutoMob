@@ -53,7 +53,7 @@ function createNav() {
     linkList[2].appendChild(document.createTextNode('Logout'));
   } else if(isLoggedIn) {
     linkList[1] = document.createElement('a');
-    linkList[1].href = 'http://127.0.0.1:5500/service.html';
+    linkList[1].href = 'http://127.0.0.1:5500/services.html';
     linkList[1].appendChild(document.createTextNode('service'));
 
     linkList[2] = document.createElement('a');
