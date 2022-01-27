@@ -6,38 +6,42 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AutoMob Mechanic Services</title>
+  <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 
 <body>
   <header id="header"></header>
-  <main>
+  <main id="servicesPage">
     <h2>Our Services</h2>
-    <p>Our representatives are professional trained and skiiled with the latest and futuristic techniques to provide a
-      best quality service.</p>
-    <p>At AutoMob Mechanic, we provide a high class service to the customers for their happy and memorable driving
-      experience.</p>
-    <section style="display: flex; justify-content: space-between;">
-      <section style="width: 30%;">
-        <img src="./assets/images/preventive-maintenance.jpg" alt="" width="100%" height="200px">
+    <p>Our representatives are professional trained and skiiled with the latest and futuristic techniques to provide a best quality service.</p>
+    <p>At AutoMob Mechanic, we provide a high class service to the customers for their happy and memorable driving experience.</p>
+    <section>
+      <section>
+        <h4>Preventive Maintenance Service</h4>
+        <img src="./assets/images/preventive-maintenance.jpg" alt="" width="60%" height="120px">
         <p>Periodically check and keep your car running</p>
         <p><i>Offer: 20% off</i></p>
-        <button><a href="./preventive-maintenance.html">MoreDetails</a></button>
+        <button class="detailsBtn">MoreDetails</button>
       </section>
-      <section style="width: 30%;">
-        <img src="./assets/images/body-repair.jpg" alt="" width="100%" height="200px">
+      <section>
+        <h4>Body Repair Service</h4>
+        <img src="./assets/images/body-repair.jpg" alt="" width="60%" height="120px">
         <p>Full chasis body repair provided by the experts</p>
         <p><i>Offer: 10% off</i></p>
-        <button><a href="./body-repair-service.html">MoreDetails</a></button>
+        <button class="detailsBtn">MoreDetails</button>
       </section>
-      <section style="width: 30%;">
-        <img src="./assets/images/car-care.jpg" alt="" width="100%" height="200px">
+      <section>
+        <h4>Car Care Service</h4>
+        <img src="./assets/images/car-care.jpg" alt="" width="60%" height="120px">
         <p>Get your car sparkling clean in just minutes</p>
         <p><i>Offer: 15% off</i></p>
-        <button><a href="./car-care-service.html">MoreDetails</a></button>
+        <button class="detailsBtn">MoreDetails</button>
       </section>
     </section>
+    <p id="timer"></p>
   </main>
   <footer id="footer"></footer>
+  <script src="./assets/js/services.js"></script>
   <script src="./assets/js/index.js"></script>
 </body>
 
