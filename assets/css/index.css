@@ -6,7 +6,6 @@
 
 body {
   height: 100vh;
-  /* y-overflow: auto; */
 }
 
 #header {
@@ -24,19 +23,37 @@ body {
   text-decoration: none;
 }
 
+#header h1 a:hover {
+  text-decoration: underline white;
+  font-size: 1.05em;
+}
+
 #header nav a {
   padding: 0 10px;
-  border-right: 1px solid black;
+  border-right: 2px solid white;
   color: white;
   text-decoration: none;
+  font-size: 1rem;
+}
+
+#header nav a:hover {
+  text-decoration: underline white;
+  font-size: 1.15rem;
 }
 
 #header nav button {
   padding: 0 10px;
   border: none;
-  border-right: 1px solid black;
+  border-right: 2px solid white;
   background-color: transparent;
   color: white;
+  font-size: 1rem;
+}
+
+#header nav button:hover {
+  cursor: pointer;
+  text-decoration: underline white;
+  font-size: 1.15rem;
 }
 
 #footer {
@@ -48,7 +65,7 @@ body {
   color: white;
 }
 
-/* Main Page Styles */
+/* ====================================== Main Page Styles ===================================== */
 #mainPage {
   height: 85%;
   display: grid;
@@ -82,7 +99,7 @@ body {
 }
 /* Main Page Styles End */
 
-/* Login & Signup Styles */
+/* ================================ Login & Signup Pages Styles ================================ */
 #loginPage,
 #signupPage {
   height: 85%;
@@ -134,9 +151,9 @@ body {
   background-color: blue;
   color: white;
 }
-/* Login & Signup Styles End */
+/* ================================ Login & Signup Styles End ================================= */
 
-/* Services Page Styles */
+/* =================================== Services Page Styles ==================================== */
 #servicesPage {
   height: 85%;
   padding: 20px;
@@ -170,9 +187,241 @@ body {
   color: white;
 }
 
+#servicesPage > section section button:hover {
+  cursor: pointer;
+  border: 2px solid black;
+  background-color: rgba(0, 0, 255, 0.5);
+  color: black;
+}
+
 #servicesPage #timer {
   margin: 0;
   position: relative;
   bottom: -20px;
   color: red;
 }
+/* ==================================== Services Styles End ==================================== */
+
+/* ==================================== Service Pages Styles =================================== */
+#servicePage {
+  height: 85%;
+  padding: 20px 90px;
+}
+
+#servicePage h2 {
+  margin-bottom: 20px;
+}
+
+#servicePage section {
+  padding: 20px 0;
+}
+
+#servicePage section p {
+  margin-bottom: 10px;
+}
+
+#servicePage section ul {
+  margin-left: 30px;
+  margin-bottom: 20px; 
+}
+
+#servicePage section button {
+  height: 35px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+}
+
+#servicePage section button:hover {
+  cursor: pointer;
+  border: 2px solid black;
+  background-color: rgba(0, 0, 255, 0.5);
+  color: black;
+}
+/* ===================================== Service Styles End ==================================== */
+
+/* ==================================== Booking Page Styles ==================================== */
+#bookingPage {
+  height: 85%;
+  padding: 20px;
+}
+
+#bookingPage h2 {
+  width: 100%;
+  text-align: center;
+}
+
+#bookingPage > div {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+#bookingPage > div .selectors {
+  padding: 10px 40px;
+  display: none;
+}
+
+#bookingPage > div .selectors select {
+  width: 150px;
+}
+
+#bookingPage form {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+#bookingPage form .section {
+  width: 50%;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#bookingPage form .section h4 {
+  width: 100%;
+}
+
+#bookingPage form .section label {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#bookingPage form .section label div {
+  width: 100%;
+}
+
+#bookingPage form .section label input,
+#bookingPage form .section label select {
+  width: 100%;
+  height: 20px;
+}
+
+#bookingPage form .section #fuelType input {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px 0 10px;
+}
+
+#bookingPage form #btnBox {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+#bookingPage form #btnBox button {
+  height: 30px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+}
+
+#bookingPage form #btnBox button:hover {
+  cursor: pointer;
+  border: 2px solid black;
+  background-color: rgba(0, 0, 255, 0.5);
+  color: black;
+  padding: 0 30px;
+}
+
+#bookingPage form #message {
+  position: absolute;
+  bottom: 50px;
+  left: 40%; 
+}
+/* Bookings Styles End */
+
+/* ==================================== Success Page Styles ==================================== */
+#successPage {
+  height: 85%;
+  padding: 40px;
+  text-align: center;
+}
+
+#successPage h3 {
+  margin: 20px 0;
+}
+/* ===================================== Success Styles End ==================================== */
+
+/* ==================================== Reports Page Styles ==================================== */
+#reportsPage {
+  height: 85%;
+  padding: 20px;
+  text-align: center;
+  y-overflow: auto;
+}
+
+#reportsPage h2 {
+  margin-bottom: 20px; 
+}
+
+#reportsPage button {
+  height: 25px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+  margin-bottom: 20px;
+}
+
+#reportsPage button:hover {
+  cursor: pointer;
+  padding: 0 25px;
+  border: 2px solid black;
+  background-color: rgba(0, 0, 255, 0.5);
+  color: black;
+}
+
+#reportsPage #bookingTable {
+  width: 80%;
+  margin: auto;
+}
+
+#reportsPage #reviewTable {
+  display: none;
+  width: 60%;
+  margin: auto;
+}
+
+#reportsPage .tabel th {
+  background-color: blue;
+  color: white;
+  padding: 5px 10px;
+}
+
+#reportsPage .tabel tbody tr:nth-child(2n) {
+  background-color: rgba(0, 0, 255, 0.4)
+}
+
+#reportsPage .tabel tbody tr:nth-child(2n-1){
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
+#reportsPage .tabel tbody tr button:hover {
+  padding: 0 20px;
+  border: none;
+}
+
+#reportsPage .tabel tbody tr button {
+  margin: 0;
+}
+/* ===================================== Reports Styles End ==================================== */
+
+/* ==================================== Profile Page Styles ==================================== */
+#profilePage {
+  height: 85%;
+}
+
+
+/* ===================================== Profile Styles End ==================================== */

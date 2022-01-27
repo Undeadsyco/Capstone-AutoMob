@@ -1,28 +1,82 @@
 {
   "users": [
     {
-      "id": 1,
       "username": "Brandon Santana",
       "password": "password1",
-      "isAdmin": false
+      "email": "brandons112358@gmail.com",
+      "number": "3165530854",
+      "isAdmin": false,
+      "address": [],
+      "cars": [
+        {
+          "make": "crysler",
+          "model": "300M",
+          "fuel": "petrol",
+          "miles": "254713"
+        }
+      ],
+      "id": 1
     },
     {
-      "id": 2,
       "username": "Admin",
       "password": "Admin@123",
-      "isAdmin": true
+      "email": "admin@gmail.com",
+      "number": "3165530854",
+      "isAdmin": true,
+      "address": [],
+      "cars": [],
+      "id": 2
     },
     {
       "username": "adam",
       "password": "password1",
+      "email": "adam@gmail.com",
+      "number": "3163683632",
       "isAdmin": false,
+      "address": [],
+      "cars": [],
       "id": 3
     },
     {
       "username": "user",
       "password": "password1",
+      "email": "user@gmail.com",
+      "number": "3167479208",
       "isAdmin": false,
+      "address": [],
+      "cars": [],
       "id": 4
+    }
+  ],
+  "bookings": [
+    {
+      "user": {
+        "name": "Brandon Santana",
+        "email": "bubblebutt199891@gmail.com",
+        "number": "3162529687",
+        "address": {
+          "state": "KS",
+          "city": "Wichita",
+          "address": "831 south dellrose"
+        }
+      },
+      "car": {
+        "make": "crysler",
+        "model": "300M",
+        "miles": "254713",
+        "fuel": "petrol"
+      },
+      "service": "preventive maintenance",
+      "date": "2022-01-28",
+      "id": 1
+    }
+  ],
+  "reviews": [
+    {
+      "username": "Brandon Santana",
+      "email": "brandons112358@gmail.com",
+      "score": "8",
+      "id": 1
     }
   ]
 }

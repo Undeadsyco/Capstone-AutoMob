@@ -47,7 +47,7 @@ function createNav() {
     
     linkList[2] = document.createElement('button');
     linkList[2].addEventListener('click', function(){
-      localStorage.removeItem('user');
+      localStorage.clear();
       location.assign('http://127.0.0.1:5500/home.html')
     })
     linkList[2].appendChild(document.createTextNode('Logout'));
@@ -62,10 +62,14 @@ function createNav() {
     
     linkList[3] = document.createElement('button');
     linkList[3].addEventListener('click', function(){
-      localStorage.removeItem('user');
+      localStorage.clear();
       location.assign('http://127.0.0.1:5500/home.html')
     })
     linkList[3].appendChild(document.createTextNode('Logout'));
+
+    linkList[4] = document.createElement('a');
+    linkList[4].href = 'http://127.0.0.1:5500/profile.html';
+    linkList[4].appendChild(document.createTextNode('Profile'));
   } else {
     linkList[1] = document.createElement('a');
     linkList[1].href = 'http://127.0.0.1:5500/login.html';
