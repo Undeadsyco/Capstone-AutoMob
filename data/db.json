@@ -6,7 +6,13 @@
       "email": "brandons112358@gmail.com",
       "number": "3165530854",
       "isAdmin": false,
-      "address": [],
+      "address": [
+        {
+          "state": "Kansas",
+          "city": "Wichita",
+          "address": "1448 North Volutsia"
+        }
+      ],
       "cars": [
         {
           "make": "crysler",
