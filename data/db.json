@@ -54,6 +54,26 @@
       "id": 4
     }
   ],
+  "services": [
+    {
+      "id": 1,
+      "name": "Preventive Maintenance Service",
+      "description": "Periodically check and keep your car running",
+      "offer": "20"
+    },
+    {
+      "id": 2,
+      "name": "Body Repair Service",
+      "description": "Full chasis body repair provided by the experts",
+      "offer": "10"
+    },
+    {
+      "id": 3,
+      "name": "Car Care Service",
+      "description": "Get your car sparkling clean in just minutes",
+      "offer": "15"
+    }
+  ],
   "bookings": [
     {
       "user": {
