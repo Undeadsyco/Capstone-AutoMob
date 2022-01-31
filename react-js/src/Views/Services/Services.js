@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { v4 } from 'uuid';
 
 import { ServiceCard } from "../../Components";
 import ServicesContainer from "./styles";
@@ -6,9 +7,9 @@ import ServicesContainer from "./styles";
 import PreventiveMaintenance from '../../assets/images/preventive-maintenance.jpg';
 import BodyRepair from '../../assets/images/body-repair.jpg';
 import CarCare from '../../assets/images/car-care.jpg';
-import { useEffect } from "react";
 
 const Services = ({ list, getList }) => {
+
   useEffect(() => {
     getList();
   }, [getList]);
@@ -32,7 +33,9 @@ const Services = ({ list, getList }) => {
       <p>At AutoMob Mechanic, we provide a high class service to the customers for their happy and memorable driving experience.</p>
       <div className="cardContainer">
         {list?.map((item, index) => (
-          <ServiceCard 
+          <ServiceCard
+            key={v4()}
+            id={item.id}
             title={item.name}
             description={item.description}
             offer={item.offer}

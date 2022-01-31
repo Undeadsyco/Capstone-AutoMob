@@ -31,6 +31,6 @@ async function login(body) {
   if (user.password === password) {
     localStorage.setItem('user', JSON.stringify(user));
     alert('Login was successful!');
-    location.assign('http://127.0.0.1:5500/home.html')
+    location.assign('http://127.0.0.1:5500/vanilla-js/home.html')
   }
 }

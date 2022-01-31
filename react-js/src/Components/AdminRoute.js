@@ -1,9 +1,7 @@
-const AdminRoute = () => {
-  return (
-    <div>
+import { Navigate, Outlet } from "react-router-dom";
 
-    </div>
-  );
+const AdminRoute = ({ user }) => {
+  return user?.isAdmin ? <Outlet /> : <Navigate to="/" />
 };
 
 export default AdminRoute;

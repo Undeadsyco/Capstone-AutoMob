@@ -24,6 +24,6 @@ async function signup(body) {
   const res = await req.json()
   if (res) {
     localStorage.setItem('user', JSON.stringify(res));
-    location.assign('http://127.0.0.1:5500/home.html')
+    location.assign('http://127.0.0.1:5500/vanilla-js/home.html')
   }
 }

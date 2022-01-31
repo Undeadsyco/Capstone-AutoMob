@@ -33,6 +33,7 @@ const AppContainer = styled.div`
         }
 
         &:hover {
+          cursor: pointer;
           text-decoration: underline white;
           padding: 2px 15px;
           font-size: 1rem;

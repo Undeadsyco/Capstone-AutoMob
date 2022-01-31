@@ -151,6 +151,6 @@ async function book(body) {
   });
   const res = await req.json();
   if (res) {
-    location.assign('http://127.0.0.1:5500/booking-success.html');
+    location.assign('http://127.0.0.1:5500/vanilla-js/booking-success.html');
   }
 }

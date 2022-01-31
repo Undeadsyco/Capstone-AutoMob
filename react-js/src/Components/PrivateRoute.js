@@ -1,9 +1,9 @@
-const PrivateRoute = () => {
-  return (
-    <div>
+import { Navigate, Outlet } from 'react-router-dom';
+import useAuth from '../Utils/useAuth';
 
-    </div>
-  );
+const PrivateRoute = () => {
+  const { checkAuth } = useAuth();
+  return checkAuth ? <Outlet /> : <Navigate to="/" />
 };
 
 export default PrivateRoute;

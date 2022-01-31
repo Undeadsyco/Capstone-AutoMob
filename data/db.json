@@ -59,19 +59,38 @@
       "id": 1,
       "name": "Preventive Maintenance Service",
       "description": "Periodically check and keep your car running",
-      "offer": "20"
+      "offer": "20",
+      "about": "Looking to keep your car functioning smoothly? Save money and opt for AutoMob Mechanic's periodic maintenance service. This service aims at:",
+      "list": [
+        "Air filter replacement",
+        "Engine oil replacement",
+        "Break pad cleaning"
+      ]
     },
     {
       "id": 2,
       "name": "Body Repair Service",
       "description": "Full chasis body repair provided by the experts",
-      "offer": "10"
+      "offer": "10",
+      "about": "Paint scratches and dents degrades the appearance of your car? Opt for AutoMob Mechanic's body repair service. This service aims at:",
+      "list": [
+        "Car dent repair",
+        "Car painting",
+        "Complete car body repair service"
+      ]
     },
     {
       "id": 3,
       "name": "Car Care Service",
       "description": "Get your car sparkling clean in just minutes",
-      "offer": "15"
+      "offer": "15",
+      "about": "Looking to keep your car neat and clean? Save money and opt for AutoMob Mechanic's car care service. We offer an extencive range of car wash and cleaning services such as:",
+      "list": [
+        "Basic car washing and vacuuming",
+        "Detailed interior and upholstery cleaning",
+        "Protective coating",
+        "Dashboard polishing"
+      ]
     }
   ],
   "bookings": [
@@ -95,6 +114,69 @@
       "service": "preventive maintenance",
       "date": "2022-01-28",
       "id": 1
+    },
+    {
+      "user": {
+        "name": "Brandon Santana",
+        "email": "bubblebutt199891@gmail.com",
+        "number": "3165530854",
+        "address": {
+          "city": "Wichita",
+          "state": "Kansas",
+          "address": "1448 North Volutsia"
+        }
+      },
+      "car": {
+        "make": "Ford",
+        "model": "F150",
+        "fuel": "petrol",
+        "miles": 13421
+      },
+      "service": "Preventive Maintenance Service",
+      "date": "2022-02-01",
+      "id": 2
+    },
+    {
+      "user": {
+        "name": "Brandon Santana",
+        "email": "bubblebutt199891@gmail.com",
+        "number": "3165530854",
+        "address": {
+          "city": "Wichita",
+          "state": "Kansas",
+          "address": "1448 North Volutsia"
+        }
+      },
+      "car": {
+        "make": "Ford",
+        "model": "F150",
+        "fuel": "petrol",
+        "miles": 13421
+      },
+      "service": "Preventive Maintenance Service",
+      "date": "2022-02-03",
+      "id": 3
+    },
+    {
+      "user": {
+        "name": "Brandon Santana",
+        "email": "brandons112358@gmail.com",
+        "number": "3165530854",
+        "address": {
+          "city": "Wichita",
+          "state": "Kansas",
+          "address": "1448 North Volutsia"
+        }
+      },
+      "car": {
+        "make": "crysler",
+        "model": "300M",
+        "fuel": "petrol",
+        "miles": "254713"
+      },
+      "service": "preventive maintenance",
+      "date": "2022-02-03",
+      "id": 4
     }
   ],
   "reviews": [

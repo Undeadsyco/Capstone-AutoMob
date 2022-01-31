@@ -1,31 +1,37 @@
 import { Routes, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
+import useAuth from './Utils/useAuth';
 
-import { Header, Footer } from './Components';
-import { Home, Services, Service } from './Views';
+import { Header, Footer, PrivateRoute, AdminRoute } from './Components';
+import { 
+  Home, Services, Service, Booking, Confirmation, Login, Profile,
+} from './Views';
 import { AppContainer } from './Styles';
 
 import actions from './Actions';
 
 function App(props) {
+  const { checkAuth } = useAuth();
+  checkAuth();
+
   return (
     <AppContainer className="App">
-      <Header />
+      <Header isLoggedIn={props.isLoggedIn} user={props.user} />
       <div className='body'>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/" element={undefined}>
-            <Route path="profile" element={undefined} />
-            <Route path="admin/" element={undefined}>
+          <Route path="/" element={<PrivateRoute />}>
+            <Route path="profile" element={<Profile user={props.user} />} />
+            <Route path="admin/" element={<AdminRoute user={props.user} />}>
               <Route path="reports" element={undefined} />
             </Route>
           </Route>
-          <Route path="/login" element={undefined} />
+          <Route path="/login" element={<Login submit={props.onLogin} />} />
           <Route path="/sign-up" element={undefined} />
           <Route path="/services" element={<Services list={props.services} getList={props.onGetServices} />} />
-          <Route path="/services/:service" element={<Service />} />
-          <Route path="/booking" element={undefined} />
-          <Route path="booking-confirmation" element={undefined} />
+          <Route path="/services/:service" element={<Service onGetService={props.onGetService} />} />
+          <Route path="/booking" element={<Booking submit={props.onSubmitBooking} user={props.user} />} />
+          <Route path="/booking-confirmation" element={<Confirmation />} />
         </Routes>
       </div>
       <Footer />
@@ -34,14 +40,19 @@ function App(props) {
 }
 
 const mapStateToProps = (state) => ({
-  services: state.services
+  isLoggedIn: state.isLoggedIn,
+  user: state.user,
+  services: state.services,
 });
 
 const mapDispatchToProps = (dispatch) => {
-  const { getServices } = actions;
+  const { getServices, getService, submitBooking, login } = actions;
 
   return ({
+    onLogin: (name) => login(name),
     onGetServices: () => getServices().then(data => dispatch({ type: 'GET_SERVICES', data })),
+    onGetService : (id) => getService(id),
+    onSubmitBooking: (body) => submitBooking(body),
   });
 }
 

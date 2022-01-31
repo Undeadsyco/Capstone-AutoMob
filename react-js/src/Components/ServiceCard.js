@@ -33,7 +33,7 @@ const Card = styled.div`
   }
 `;
 
-const ServiceCard = ({ title, source, description, offer, link }) => {
+const ServiceCard = ({ title, source, description, offer, link, id }) => {
   const navigate = useNavigate();
 
   return (
@@ -42,7 +42,7 @@ const ServiceCard = ({ title, source, description, offer, link }) => {
       <img src={source} alt="" />
       <p>{description}</p>
       <p><i>offer: {offer}% off</i></p>
-      <button onClick={() => navigate(link)}>More Details</button>
+      <button onClick={() => navigate(link, { state: { id }})}>More Details</button>
     </Card>
   );
 };
