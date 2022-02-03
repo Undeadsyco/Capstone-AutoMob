@@ -1,20 +1,31 @@
+import { useEffect, useState } from 'react';
+import {
+  ProfileDetails, CarsList, AddressList, FormContainer, BookingList
+} from '../../Components/ProfileComponents';
 import ProfileContainer from "./styles";
 
-const Profile = ({ user }) => {
+const Profile = (props) => {
+  const [bookingDisplay, setBookingDisplay] = useState(false);
+  const {
+    user, editDetails, deleteCarItem, deleteAddressItem,
+    addCarItem, addAddressItem, getBookings, userBookings
+  } = props;
+
+  useEffect(() => {
+    getBookings(user?.username)
+  }, [getBookings, user])
+
   return (
     <ProfileContainer className="multiGrid" width="80%" rows={12} cols={12}>
-      <div className="profileInfo">
-        <h2>Welcome to your profile {user?.username}</h2>
-        <h3 className="email">Email: {user?.email}</h3>
-        <input className="emailInput" style={{ display: "none" }} placeholder="Enter new email" />
-        <h3 className="number">Phone Number: {user?.number}</h3>
-        <input className="numberInput" style={{ display: "none" }} placeholder="Enter new phone number" />
-        <button className="editBtn">Edit</button>
-        <button className="submitBtn" style={{ display: "none" }}>Submit</button>
-      </div>
-      <div className="carsList"></div>
-      <div className="addressList"></div>
-      <div className="formContainer"></div>
+      <ProfileDetails user={user} editDetails={editDetails} setBookingDisplay={setBookingDisplay} />
+      <CarsList userId={user?.id} list={user?.cars} deleteItem={deleteCarItem} />
+      <AddressList userId={user?.id} list={user?.address} deleteItem={deleteAddressItem} />
+      <FormContainer userId={user?.id} addCarItem={addCarItem} addAddressItem={addAddressItem} />
+      <BookingList 
+        bookingDisplay={bookingDisplay}
+        setBookingDisplay={setBookingDisplay}
+        list={userBookings}
+      />
     </ProfileContainer>
   );
 };

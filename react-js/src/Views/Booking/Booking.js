@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useFormik } from "formik";
-import { useLocation, useNavigate, useResolvedPath } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import * as yup from 'yup';
 import { v4 } from "uuid";
 
-import { UserForm, BookingForm } from "../../Components";
+import { UserForm, BookingForm } from '../../Components/BookingComponents'
 import BookingContainer from "./styles";
 
 const validation = yup.object({
@@ -38,7 +38,7 @@ const Booking = ({ submit, user }) => {
       city: "",
       state: "",
       address: "",
-      service: state?.service ? state.service : "",
+      service: state?.service ? state?.service : "",
       make: "",
       model: "",
       fuel: "",
@@ -84,24 +84,24 @@ const Booking = ({ submit, user }) => {
       <h2>Book Your Service</h2>
       <div className="selectContainer">
         <div>
-          <h4>Select your car</h4>
-          <select onChange={(e) => setCarIndex(e.target.value)}>
-            <option value="">select car</option>
-            {user?.cars.map((item, index) => (
-              <option key={v4()} value={index}>{item.make} {item.model}</option>
-            ))}
-          </select>
-          <button onClick={() => setCar()}>Select</button>
-        </div>
-        <div>
           <h4>Select your address</h4>
-          <select onChange={(e) => setAddressIndex(e.target.value)}>
+          <select onChange={(e) => setAddressIndex(e.target.value)} value={addressIndex}>
             <option value="">select car</option>
             {user?.address.map((item, index) => (
               <option key={v4()} value={index}>{item.address}</option>
             ))}
           </select>
           <button onClick={() => setAddress()}>Select</button>
+        </div>
+        <div>
+          <h4>Select your car</h4>
+          <select onChange={(e) => setCarIndex(e.target.value)} value={carIndex}>
+            <option value="">select car</option>
+            {user?.cars.map((item, index) => (
+              <option key={v4()} value={index}>{item.make} {item.model}</option>
+            ))}
+          </select>
+          <button onClick={() => setCar()}>Select</button>
         </div>
       </div>
       <form onSubmit={formik.handleSubmit} className="formContainer">

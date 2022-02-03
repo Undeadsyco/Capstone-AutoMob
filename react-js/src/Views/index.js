@@ -5,3 +5,5 @@ export { default as Booking } from './Booking/Booking';
 export { default as Confirmation } from './Confirmation/Confirmation';
 export { default as Login } from './Login/Login';
 export { default as Profile } from './Profile/Profile';
+export { default as Reports } from './Reports/Reports';
+export { default as Signup } from './Signup/Signup';

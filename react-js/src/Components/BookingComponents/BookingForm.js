@@ -12,9 +12,9 @@ const BookingForm = ({ formik }) => {
           onBlur={formik.handleBlur}
         >
           <option value="">select service</option>
-          <option value="preventive maintenance">Preventive Maintenance</option>
-          <option value="car care">Car Care</option>
-          <option value="body repair">Body Repair</option>
+          <option value="Preventive Maintenance">Preventive Maintenance</option>
+          <option value="Car Care">Car Care</option>
+          <option value="Body Repair">Body Repair</option>
         </select>
         {formik.errors.service && formik.touched.service && <div className="err">{formik.errors.service}</div>}
       </label>

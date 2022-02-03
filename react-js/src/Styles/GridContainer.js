@@ -5,7 +5,7 @@ const GridContainer = styled.div`
   height: ${props => props.height || '100%'};
   display: grid;
   grid-template-columns: ${props => props.cols || '100%'};
-  grid-template-rows: ${props => props.row || '100%'};
+  grid-template-rows: ${props => props.rows || '100%'};
   justify-content: ${props => props.justify || 'center'};
   align-items: ${props => props.align || 'center'};
 
