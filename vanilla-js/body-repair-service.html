@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoMob Mechanic Body Repair Service</title>
+  <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body>
+  <header id="header"></header>
+  <main id="servicePage">
+    <h2>Body Repair Service</h2>
+    <img src="./assets/images/body-repair-service.jpg" alt="" width="40%" height="230px">
+    <section>
+      <p>Paint scratches and dents degrades the appearance of your car? Opt for AutoMob Mechanic's body repair service. This service aims at:</p>
+      <ul>
+        <li>Car dent repair</li>
+        <li>Car painting</li>
+        <li>Complete car body repair service</li>
+      </ul>
+      <button id="bookBtn">Book Service</button>
+      <button id="backBtn">Go Back</button>
+    </section>
+  </main>
+  <footer id="footer"></footer>
+  <script>
+    const bookBtn = document.getElementById('bookBtn');
+    const backBtn = document.getElementById('backBtn');
+
+    bookBtn.addEventListener('click', function() {
+      localStorage.setItem('service', 'body repair');
+      location.assign('http://127.0.0.1:5500/vanilla-js/booking.html');
+    });
+
+    backBtn.addEventListener('click', function() {
+      history.back();
+    });
+  </script>
+  <script src="./assets/js/index.js"></script>
+</body>
+</html>

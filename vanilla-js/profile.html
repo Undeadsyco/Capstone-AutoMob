@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoMob Mechanic Profile</title>
+  <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<body>
+  <header id="header"></header>
+  <main id="profilePage">
+    <div id="profileInfo">
+      <h1 id="title">Welcome to your Profile</h1>
+      <h2 id="email">Email:</h2>
+      <h2 id="number">Phone Number:</h2>
+    </div>
+    <div id="carsContainer" class="listContainer">
+      <h3>Registered Cars:</h3>
+      <hr />
+      <ul id="carsList"></ul>
+    </div>
+    <div id="addressContainer" class="listContainer">
+      <h3>Registered Addresses:</h3>
+      <hr />
+      <ul id="addressList"></ul>
+    </div>
+
+    <div id="formContainer">
+      <button id="carBtn">Add Car</button>
+      <button id="addressBtn">Add Address</button>
+      <h2 id="formTitle">Add A Car</h2>
+      <form id="carForm">
+        <label for="make">
+          <div>Make:</div>
+          <input id="make" name="make" type="text">
+        </label>
+        <label for="model">
+          <div>Model:</div>
+          <input id="model" name="model" type="text">
+        </label>
+        <label for="miles">
+          <div>Miles:</div>
+          <input id="miles" name="miles" type="text">
+        </label>
+        <label for="fuel">
+          <div>Fuel:</div>
+          <input id="petrol" class="fuelType" name="fuel" type="radio" value="petrol">Petrol
+          <input id="deisel" class="fuelType" name="fuel" type="radio" value="deisel">Deisel
+          <input id="lpg" class="fuelType" name="fuel" type="radio" value="lpg">LPG
+          <input id="others" class="fuelType" name="fuel" type="radio" value="others">Others
+        </label>
+        <button type="submit">Add</button>
+      </form>
+      <form id="addressForm">
+        <label for="state">
+          <div>State:</div>
+          <input id="state" name="state" type="text">
+        </label>
+        <label for="city">
+          <div>City:</div>
+          <input id="city" name="city" type="text">
+        </label>
+        <label for="address">
+          <div>Address:</div>
+          <input id="address" name="address" type="text">
+        </label>
+        <button>Add</button>
+      </form>
+    </div>
+  </main>
+  <footer id="footer"></footer>
+  <script src="./assets/js/secure.js"></script>
+  <script src="./assets/js/profile.js"></script>
+  <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

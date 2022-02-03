@@ -3,22 +3,35 @@
     {
       "username": "Brandon Santana",
       "password": "password1",
-      "email": "brandons112358@gmail.com",
+      "email": "Brandons112358@gmail.com",
       "number": "3165530854",
       "isAdmin": false,
       "address": [
         {
+          "id": 1,
           "state": "Kansas",
           "city": "Wichita",
           "address": "1448 North Volutsia"
+        },
+        {
+          "city": "Wichita",
+          "state": "Kansas",
+          "address": "831 south dellrose"
         }
       ],
       "cars": [
         {
+          "id": 1,
           "make": "crysler",
           "model": "300M",
           "fuel": "petrol",
           "miles": "254713"
+        },
+        {
+          "make": "Ford",
+          "model": "F150",
+          "fuel": "diesel",
+          "miles": 13421
         }
       ],
       "id": 1
@@ -52,6 +65,55 @@
       "address": [],
       "cars": [],
       "id": 4
+    },
+    {
+      "username": "syco1998",
+      "password": "password1",
+      "email": "syco@gamil.com",
+      "number": "2536328674",
+      "isAdmin": false,
+      "cars": [],
+      "address": [],
+      "id": 5
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "name": "Preventive Maintenance",
+      "description": "Periodically check and keep your car running",
+      "offer": "20",
+      "about": "Looking to keep your car functioning smoothly? Save money and opt for AutoMob Mechanic's periodic maintenance service. This service aims at:",
+      "list": [
+        "Air filter replacement",
+        "Engine oil replacement",
+        "Break pad cleaning"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Body Repair",
+      "description": "Full chasis body repair provided by the experts",
+      "offer": "10",
+      "about": "Paint scratches and dents degrades the appearance of your car? Opt for AutoMob Mechanic's body repair service. This service aims at:",
+      "list": [
+        "Car dent repair",
+        "Car painting",
+        "Complete car body repair service"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Car Care",
+      "description": "Get your car sparkling clean in just minutes",
+      "offer": "15",
+      "about": "Looking to keep your car neat and clean? Save money and opt for AutoMob Mechanic's car care service. We offer an extencive range of car wash and cleaning services such as:",
+      "list": [
+        "Basic car washing and vacuuming",
+        "Detailed interior and upholstery cleaning",
+        "Protective coating",
+        "Dashboard polishing"
+      ]
     }
   ],
   "bookings": [
@@ -72,9 +134,72 @@
         "miles": "254713",
         "fuel": "petrol"
       },
-      "service": "preventive maintenance",
+      "service": "Preventive Maintenance",
       "date": "2022-01-28",
       "id": 1
+    },
+    {
+      "user": {
+        "name": "Brandon Santana",
+        "email": "bubblebutt199891@gmail.com",
+        "number": "3165530854",
+        "address": {
+          "city": "Wichita",
+          "state": "Kansas",
+          "address": "1448 North Volutsia"
+        }
+      },
+      "car": {
+        "make": "Ford",
+        "model": "F150",
+        "fuel": "petrol",
+        "miles": 13421
+      },
+      "service": "Preventive Maintenance",
+      "date": "2022-02-03",
+      "id": 3
+    },
+    {
+      "user": {
+        "name": "Brandon Santana",
+        "email": "brandons112358@gmail.com",
+        "number": "3165530854",
+        "address": {
+          "city": "Wichita",
+          "state": "Kansas",
+          "address": "1448 North Volutsia"
+        }
+      },
+      "car": {
+        "make": "crysler",
+        "model": "300M",
+        "fuel": "petrol",
+        "miles": "254713"
+      },
+      "service": "Preventive Maintenance",
+      "date": "2022-02-03",
+      "id": 4
+    },
+    {
+      "user": {
+        "name": "Brandon Santana",
+        "email": "Brandons112358@gmail.com",
+        "number": "3165530854",
+        "address": {
+          "city": "Wichita",
+          "state": "Kansas",
+          "address": "1448 North Volutsia"
+        }
+      },
+      "car": {
+        "make": "crysler",
+        "model": "300M",
+        "fuel": "petrol",
+        "miles": "254713"
+      },
+      "service": "Body Repair",
+      "date": "2022-02-07",
+      "id": 5
     }
   ],
   "reviews": [
